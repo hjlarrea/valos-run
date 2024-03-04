@@ -3,7 +3,7 @@ on:
 
 jobs:
   build:
-    name: deploy to staging
+    name: Build Web Assembly Artifact
     runs-on: ubuntu-18.04
     steps:
       - name: Install Dependencies
