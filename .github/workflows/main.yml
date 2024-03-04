@@ -6,8 +6,11 @@ jobs:
     name: Build Web Assembly Artifact
     runs-on: ubuntu-latest
     steps:
+      - name: List directory structure
+        run: ls -l
+
       - name: Install Dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r ./valos-run/requirements.txt
 
       - name: Build web assembly
-        run: pygbag .
+        run: pygbag valos-run
