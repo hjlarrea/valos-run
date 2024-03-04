@@ -51,7 +51,8 @@ TODO
 
 # Roadmap
 
-- Fix the loading issues in browsers: the WASM component might not load always, depends on the browser (Chrome, Firefox or Safari) and the platform (PC or Mobile). Might need documentation instead of a proper technical issue to be solved.
-- Fix performance issues: depending on the browser and platform where the WASM component is executed, the game might be accelerated rendering it unplayable.
-- Users are able to input their name while playing on PC, but not on mobile as the keyboard won't pop up in the main screen. Might require to render a keyboard on the screen.
-- Implement a leaderboard. Upon `gameMode == 2` condition (game over), save the combination of user and score in an external source. Then build a static website to render the results.
+- [ ] Fix the loading issues in browsers: the WASM component might not load always, depends on the browser (Chrome, Firefox or Safari) and the platform (PC or Mobile). Might need documentation instead of a proper technical issue to be solved.
+- [ ] Fix performance issues: depending on the browser and platform where the WASM component is executed, the game might be accelerated rendering it unplayable.
+- [ ] Users are able to input their name while playing on PC, but not on mobile as the keyboard won't pop up in the main screen. Might require to render a keyboard on the screen.
+- [ ] Implement a leaderboard. Upon `gameMode == 2` condition (game over), save the combination of user and score in an external source. Then build a static website to render the results.
+- [ ] Improve game dynamics: jumping based on time mouse button kept down, animated sprites, randomness in enemy spawn.
