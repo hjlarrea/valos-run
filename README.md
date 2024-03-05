@@ -32,7 +32,7 @@ Then navigate to `https://127.0.0.1:8000`.
 
 ## Docker image
 
-Run the following command standing in the project's directory:
+Having executed `pygbag`, run the following command standing in the project's directory:
 
 ```
 docker build -t valosrun:latest .

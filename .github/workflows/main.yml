@@ -1,11 +1,13 @@
 on:
   workflow_dispatch:
-
+name: Build and Deploy
 jobs:
   build:
     name: Build Web Assembly Artifact
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
+
       - name: List directory structure
         run: ls -l
 
