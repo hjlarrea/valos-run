@@ -15,10 +15,10 @@ jobs:
         run: pygbag --build .
 
       - name: Adjust screen X size reference
-        run: sed -i '' 's/REFX = 1980/REFX = 640/' ./build/web/index.html
+        run: sed -i 's/REFX = 1980/REFX = 640/' ./build/web/index.html
 
       - name: Adjust screen Y size reference
-        run: sed -i '' 's/REFY = 1080/REFX = 480/' ./build/web/index.html  
+        run: sed -i 's/REFY = 1080/REFX = 480/' ./build/web/index.html  
 
       - name: Deploy
         id: builddeploy
