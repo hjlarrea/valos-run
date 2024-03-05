@@ -15,4 +15,4 @@ jobs:
         run: pip install -r ./requirements.txt
 
       - name: Build web assembly
-        run: pygbag .
+        run: pygbag --build .
