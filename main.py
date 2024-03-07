@@ -1,5 +1,5 @@
 import asyncio,pgzero,pgzrun,pygame
-from random import randint
+from random import randint, choice
 from string import ascii_letters
 
 def draw():
@@ -77,18 +77,18 @@ def on_key_down(key):
             pressedKey = chr(key)
             user += pressedKey
     
-def selectMonster():
-    monsterSelected = randint(1,5)
-    if monsterSelected == 1:
-        return Actor("chica")
-    elif monsterSelected == 2:
-        return Actor("bunny")
-    elif monsterSelected == 3:
-        return Actor("foxy")
-    elif monsterSelected == 4:
-        return Actor("freddy2")
-    elif monsterSelected == 5:
-        return Actor("freddy")
+def selectMonster():   
+    global lastMonster
+
+    monsters = ["chica", "bunny", "foxy", "freddy2", "freddy"]
+    
+    if lastMonster in monsters: monsters.remove(lastMonster)
+
+    lastMonster = monsterSelected = choice(monsters)
+
+    return Actor(monsterSelected)
+
+    
 
 def placeValo():
     valo.x = 60
@@ -108,7 +108,7 @@ def saveScore():
 def setDifficulty():
     global speed
     global jumpDuration
-     # Set difficulty
+    # Set difficulty
     if score == 1000:
         speed = 7
         jumpDuration = jumpDuration - 0.1
@@ -161,9 +161,9 @@ speed = 5
 jumpDuration = 0.7
 gameMode = 0
 valo = Actor("valo")
+lastMonster = ""
 monster = selectMonster()
 playAgain = Actor("play")
-
 #
 # Game start
 #
