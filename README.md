@@ -25,7 +25,7 @@ pgzrun main.py
 Run the following command standing in the project's directory:
 
 ```
-pygbag .
+pygbag --build --width 640 --height 480 --ume_block 0 .
 ```
 
 Then navigate to `https://127.0.0.1:8000`.
